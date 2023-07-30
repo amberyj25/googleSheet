@@ -9,9 +9,8 @@
         <div class="index__wrapper">
           <div class="toggle-action-bar-outter">
             <div class="toggle-action-bar">
-              <button type="btn" class="btn btn-primary"><a :href="linkUrl" target="_blank">ViewGoogle Sheet</a></button>
-              <button type="button" class="btn btn-warning" @click="changeTab('Sheet')">查看</button>
-              <button type="button" class="btn btn-info" @click="changeTab('FormTable')">新增</button>
+              <button type="btn" class="btn btn-primary"><a :href="linkUrl" target="_blank">View Google Sheet</a></button>
+              <!-- <button type="button" class="btn btn-warning" @click="changeTab('Sheet')">查看</button> -->
             </div>
           </div>
           <div class="checkout_sop_content">
