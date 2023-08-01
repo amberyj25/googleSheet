@@ -16,6 +16,7 @@
     "google-spreadsheet": "^3.0.11",
     "sheetsu-node": "0.0.7",
     "vue": "^2.6.11",
+    "vue-loading-overlay": "3.4.2",
     "vue-sweetalert2": "^5.0.5"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@
     <div>
       <div>
         <div class="table-responsiv">
+            <VueLoading :active.sync="isLoading"></VueLoading>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -38,7 +39,7 @@ export default {
   data() {
     return {
       rows: [],
-      loading: false,
+      isLoading: true,
       sheetId: '1twyEDsDvt3ttzJgXWfzqvd_vdAUBzWKe9Dvc2Lx9QbE',
       titles: ['Date', 'Name', 'Phone', 'Content']
     }
@@ -47,7 +48,6 @@ export default {
     async accessSpreadSheet() {
       const vm = this;
       const doc = new GoogleSpreadsheet(vm.sheetId);
-      // vm.loading = true
       await doc.useServiceAccountAuth(creds);
       await doc.loadInfo();
       const sheet = doc.sheetsByIndex[0];
@@ -56,7 +56,7 @@ export default {
       })
       if (rows) {
         vm.rows = rows;
-        // vm.loading = false
+        vm.isLoading = false
       }
     }
   },
